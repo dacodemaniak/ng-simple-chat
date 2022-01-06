@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  socketApiURL: 'http://127.0.0.1:8080/websocket'
+  socketApiURL: 'ws://127.0.0.1:8080/websocket'
 };
 
 /*
