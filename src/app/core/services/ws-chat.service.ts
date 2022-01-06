@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WsChatService {
-  private readonly endpoint: string = `${environment.socketApiURL}/topic`;
+  private readonly endpoint: string = `${environment.socketApiURL}/topic/public`;
   private readonly requestEndpoint: string = '/topic';
 
   private webSocket!: StompSockWebSocket;
