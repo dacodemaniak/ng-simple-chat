@@ -18,7 +18,10 @@
     "@angular/platform-browser": "~12.1.1",
     "@angular/platform-browser-dynamic": "~12.1.1",
     "@angular/router": "~12.1.1",
+    "@oril/ng-stomp-sock": "^12.0.1",
+    "@stomp/stompjs": "^5.4.4",
     "rxjs": "~6.6.0",
+    "sockjs-client": "^1.5.2",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
   },
