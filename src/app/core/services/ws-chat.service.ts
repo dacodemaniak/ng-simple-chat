@@ -17,7 +17,8 @@ export class WsChatService {
 
   constructor(
     private _websocketService: StompSockService
-  ) { }
+  ) { 
+  }
 
   public doConnect(): Promise<void> {
     return new Promise((resolve: any) => {
@@ -38,10 +39,12 @@ export class WsChatService {
   }
 
   public onReceive(): Observable<any> {
+    console.log(`Receiving some datas from backend`);
     return this.webSocket.on<any>(WsCommand.MESSAGE)
   }
 
-  public send(endpoint: string, message: MessageInterface): void {
-    this.webSocket.send(`${this.requestEndpoint}/${endpoint}`, JSON.stringify(message));
+  public send(endpoint: string, message?: MessageInterface): void {
+    console.log(`Sending greeting message : ${JSON.stringify(message)}`);
+    this.webSocket.send(`${this.requestEndpoint}/${endpoint}`, {chatMessage: {body: message}});
   }
 }
