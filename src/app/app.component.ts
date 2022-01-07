@@ -14,12 +14,17 @@ export class AppComponent implements OnInit, OnDestroy {
     this.chatService.doConnect().then(() => {
       // Let's present to server
       this.chatService.send(
-        'chat.register',
+        'chat.hello',
         {
           sender: 'dacodemaniak',
-          type: MessageType.JOIN
+          type: MessageType.CHAT
         }
       );
+
+      // Subscribe to inbound messages
+      this.chatService.onReceive().subscribe((data: any) => {
+        console.log(`Receiving ${JSON.stringify(data)}`);
+      })
     });
 
   }
