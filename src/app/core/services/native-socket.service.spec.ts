@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WsChatService } from './ws-chat.service';
+import { NativeSocketService } from './native-socket.service';
 
-describe('WsChatService', () => {
-  let service: WsChatService;
+describe('NativeSocketService', () => {
+  let service: NativeSocketService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(WsChatService);
+    service = TestBed.inject(NativeSocketService);
   });
 
   it('should be created', () => {
